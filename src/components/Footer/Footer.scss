@@ -1,0 +1,35 @@
+.divContainerFooter {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	height: 9vh;
+	a {
+		img {
+            margin: 25px auto;
+			height: 20px;
+			width: 20px;
+			transition: 0.2s;
+		}
+		img:hover {
+            margin: 20px auto;
+			height: 30px;
+			width: 30px;
+		}
+		svg {
+            margin: 25px auto;
+			height: 20px;
+			width: 20px;
+            transition: 0.2s;
+		}
+        svg:hover{
+            margin: 20px auto;
+			height: 30px;
+			width: 30px;
+		}
+	}
+    h4 {
+        display: flex;
+        margin-top: 20px;
+        gap: 5px;
+    }
+}

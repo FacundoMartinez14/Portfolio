@@ -1,0 +1,73 @@
+.divContainerProjects {
+	display: flex;
+	max-width: 100vw;
+	flex-direction: column;
+	padding-bottom: 30px;
+	h1 {
+		font-size: 30px;
+		font-family: 'Roboto', sans-serif;
+		padding-left: 4rem;
+	}
+	section {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 50px;
+		height: 70vh;
+		div {
+			display: flex;
+			flex-direction: column;
+			height: inherit;
+			width: 20%;
+			border-radius: 7px;
+			p {
+				text-align: justify;
+				padding: 0px 15px 0px 15px;
+			}
+			img {
+				height: 175px;
+				width: 100%;
+				border-radius: 7px 7px 0px 0px;
+				margin-bottom: 15px;
+			}
+			ul {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: 1fr;
+				margin-bottom: 15px;
+			}
+			li {
+				font-family: 'Roboto', sans-serif;
+				font-size: 12px;
+				text-align: center;
+                color: gray;
+			}
+			div {
+				align-self: center;
+				justify-self: center;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: 1fr;
+				grid-column-gap: 20px;
+				width: 100%;
+				a {
+					display: flex;
+					align-items: flex-end;
+					justify-content: flex-end;
+					img {
+						height: 24px;
+						width: 24px;
+						margin: 15px auto;
+                        transition: 0.2s;
+					}
+                    img:hover{
+                        height: 30px;
+						width: 30px;
+                    }
+					svg {
+						margin: 15px auto;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.divContainerLanding{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+    height: calc(100vh - 54px);
+    padding: 0.5rem 3rem;  
+    background: linear-gradient(180deg, rgba(255,255,255,1) 83%, rgba(217,217,217,1) 100%);
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        span{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+    }
+    div{
+        margin: auto;
+        padding: 2rem;
+    }
+    button{
+        background-color: gray;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        color: aliceblue;
+        margin-top: 2rem;
+    
+    }
+}

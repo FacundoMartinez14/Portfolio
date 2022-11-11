@@ -1,0 +1,58 @@
+.divContainerAbout {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 50px;
+	max-width: 100vw;
+	padding-top: 50px;
+	div {
+		height: 30%;
+		width: 50%;
+		text-align: justify;
+		display: flex;
+		flex-direction: column;
+		h2 {
+			font-family: 'Roboto', sans-serif;
+			font-weight: 700;
+			font-size: 30px;
+		}
+		p {
+			font-family: 'Roboto', sans-serif;
+			font-style: italic;
+			font-weight: 400;
+		}
+		ul {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			grid-column-gap: 20px;
+			grid-row-gap: 2px;
+			li {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 400;
+			}
+			li::before {
+				content: '∴';
+				margin-right: 5px;
+				color: gray;
+			}
+		}
+		button {
+			padding: 1rem 2rem;
+			border-radius: 6px;
+			background-color: gray;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			color: aliceblue;
+			justify-self: center;
+			align-self: center;
+		}
+	}
+	img {
+		width: 20%;
+		height: 30%;
+		border-radius: 15px;
+	}
+}
