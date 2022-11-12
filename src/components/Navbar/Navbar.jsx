@@ -1,40 +1,77 @@
 import React from 'react';
+import { useState } from 'react';
 
-export default function Navbar() {
+export default function NavBar() {
+	const [navbar, setNavbar] = useState(false);
+
 	return (
-		<nav className="sticky top-0 flex items-center justify-between flex-wrap bg-blue p-3 shadow-2xl">
-			<div className="flex items-center flex-shrink-0 text-white mr-6"></div>
-			<div className="block lg:hidden">
-				<button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"></button>
-			</div>
-			<div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-				<div className="text-sm lg:flex-grow">
-					<a
-						href="#Projects"
-						className="block mt-4 lg:inline-block lg:mt-0 text-gray transition duration-300 hover:text-white mr-4 	"
-					>
-						Proyectos
-					</a>
-					<a
-						href="#About"
-						className="block mt-4 lg:inline-block lg:mt-0 text-gray transition duration-300 hover:text-white mr-4"
-					>
-						Acerca de mi...
-					</a>
-					<a
-						href="mailto:facundo.eet2@gmail.com"
-						className="block mt-4 lg:inline-block lg:mt-0 text-gray transition duration-300 hover:text-white"
-					>
-						Contactame!
-					</a>
+		<nav className="sticky top-0 w-full bg-blue shadow-md shadow-blue">
+			<div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+				<div>
+					<div className="flex items-center justify-between py-3 md:py-5 md:block">
+						<button
+							className="text-white transition-all duration-300 hover:text-blue hover:bg-white rounded p-2"
+							onClick={() => window.scrollTo(0, 0)}
+						>
+							<h2 className="text-2xl font-bold ">Facundo Martinez</h2>
+						</button>
+
+						<div className="md:hidden">
+							<button
+								className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+								onClick={() => setNavbar(!navbar)}
+							>
+								{navbar ? (
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										className="w-6 h-6"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+									>
+										<path
+											fillRule="evenodd"
+											d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+											clipRule="evenodd"
+										/>
+									</svg>
+								) : (
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										className="w-6 h-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+										strokeWidth={2}
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M4 6h16M4 12h16M4 18h16"
+										/>
+									</svg>
+								)}
+							</button>
+						</div>
+					</div>
 				</div>
 				<div>
-					<button
-						onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-						className="inline-block text-sm px-4 py-2 leading-none text-black bg-white font-light rounded-lg transition-all duration-300 hover:font-bold  mt-4 lg:mt-0"
+					<div
+						className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+							navbar ? 'block' : 'hidden'
+						}`}
 					>
-						Facundo Martinez
-					</button>
+						<ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+							<li className="text-gray transition-all duration-300 hover:text-white">
+								<a href="#Projects">Proyectos</a>
+							</li>
+							<li className="text-gray transition-all duration-300 hover:text-white">
+								<a href="#About">Acerca de mi...</a>
+							</li>
+							<li className="text-gray transition-all duration-300 hover:text-white">
+								<a href="mailto:facundo.eet2@gmail.com">Contactame</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</nav>

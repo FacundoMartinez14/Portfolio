@@ -39,7 +39,7 @@
 				font-family: 'Roboto', sans-serif;
 				font-size: 12px;
 				text-align: center;
-                color: gray;
+				color: gray;
 			}
 			div {
 				align-self: center;
@@ -57,16 +57,46 @@
 						height: 24px;
 						width: 24px;
 						margin: 15px auto;
-                        transition: 0.2s;
+						transition: 0.2s;
 					}
-                    img:hover{
-                        height: 30px;
+					img:hover {
+						height: 30px;
 						width: 30px;
-                    }
+					}
 					svg {
 						margin: 15px auto;
 					}
 				}
+			}
+		}
+		
+	}
+}
+
+@media (max-width: 426px) {
+	.divContainerProjects {
+		h1{
+			padding: 0;
+			margin: auto;
+
+		}
+		section {
+			flex-direction: column;
+			gap: 20px;
+			height: auto;
+			div{
+				margin: auto;
+				width: 90%;
+			}
+		}
+	}
+}
+@media (max-width: 768px) and (min-width: 426px){
+	.divContainerProjects{
+		section{
+			height: 50vh;
+			div{
+				width: 40%;
 			}
 		}
 	}

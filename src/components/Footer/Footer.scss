@@ -33,3 +33,43 @@
         gap: 5px;
     }
 }
+
+@media (max-width: 426px) {
+	.divContainerFooter{
+		display: flex;
+		justify-content: space-around;
+		h4{
+			display: none;
+		}
+		a{
+			img{
+				height: 30px;
+				width: 30px;
+			}
+			svg{
+				height: 30px;
+				width: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+	.divContainerFooter{
+		display: flex;
+		justify-content: space-around;
+		h4{
+			display: none;
+		}
+		a{
+			img{
+				height: 30px;
+				width: 30px;
+			}
+			svg{
+				height: 30px;
+				width: 30px;
+			}
+		}
+	}
+}
