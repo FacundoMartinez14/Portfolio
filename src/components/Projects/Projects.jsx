@@ -28,7 +28,7 @@ export default function Projects() {
 								height="40"
 							/>
 						</a>
-						<a href="https://gamer-commerce.vercel.app/">
+						<a href="https://game-loop-5vo8.vercel.app/">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
