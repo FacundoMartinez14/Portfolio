@@ -1,11 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import foto from '../../img/fotocv.jpg';
 import './About.scss';
 import curriculum from '../../img/CVdesign.pdf';
 export default function About() {
+	const [isVisible, setIsVisible] = useState(false);
+	const listenToScroll = () => {
+		const winScroll = document.body.scrollTop ||
+		document.documentElement.scrollTop;
+		
+		if (winScroll > 500) { 
+			 setIsVisible(true);
+		} else {
+			 setIsVisible(false);
+		}
+	  };
+	  console.log(isVisible)
+	useEffect(() => {
+		window.addEventListener("scroll", listenToScroll);
+		return () =>
+		   window.removeEventListener("scroll", listenToScroll);
+	  }, [])
 	return (
 		<div className="divContainerAbout bg-gray" id="About">
-			<img className="shadow-lg" src={foto} alt="Facundo Martinez" />
+			<img className={`shadow-lg transition-all duration:500 ${isVisible ? "translate-x-0" : "-translate-x-96"} z-0`} src={foto} alt="Facundo Martinez" />
 
 			<div>
 				<h2 className="text-black">¿Quien soy?</h2>
@@ -43,7 +60,7 @@ export default function About() {
 					<li>PostgreSQL</li>
 				</ul>
 				<a href={curriculum}>
-					<button className="bg-black border text-white transition-all hover:bg-gray hover:text-black active:bg-darker-gray">
+					<button className="bg-darker-gray border text-black transition-all hover:bg-black hover:text-white active:bg-darker-gray">
 						Mira mi curriculum!
 					</button>
 				</a>

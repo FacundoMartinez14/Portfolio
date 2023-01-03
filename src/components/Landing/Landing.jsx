@@ -5,7 +5,7 @@ export default function Landing() {
 		<div className="divContainerLanding">
 			<div>
 				<p>
-					<span classNqame="text-green">Hola mundo!</span> Mi nombre es...
+					<span className="text-green">Hola mundo!</span> Mi nombre es...
 				</p>
 				<h1 className="font-bold">Facundo Martinez</h1>
 				<p className="text-black">
