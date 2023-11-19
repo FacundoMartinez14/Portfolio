@@ -13,7 +13,7 @@ export default function Landing() {
 					Argentina, siempre creando un proyecto nuevo. Te invito a
 					contactarme...
 				</p>
-				<a href="mailto:facundo.ee2@gmail.com">
+				<a href="mailto:facundo.eet2@gmail.com">
 					<button className="bg-gray text-black transition-all hover:bg-black hover:text-white active:bg-darker-gray">
 						Contactame!
 					</button>
